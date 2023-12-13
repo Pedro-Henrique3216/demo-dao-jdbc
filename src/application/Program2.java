@@ -5,6 +5,7 @@ import model.dao.DepartmentDao;
 import model.entities.Department;
 import model.entities.Seller;
 
+import java.util.Date;
 import java.util.List;
 
 public class Program2 {
@@ -22,5 +23,11 @@ public class Program2 {
         for(Department obj : list){
             System.out.println(obj);
         }
+
+        System.out.println();
+        System.out.println("=== TEST 3: department insert =======");
+        Department newDepartment = new Department(null, "Limpeza");
+        departmentDao.insert(newDepartment);
+        System.out.println("Inserted! new id = " + newDepartment.getId());
     }
 }
